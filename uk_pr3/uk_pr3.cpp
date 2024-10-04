@@ -56,7 +56,7 @@ public:
     void pop_front()
     {
         Node* temp = head;
-        head->next = head;
+        head = head->next;
         if (head != nullptr) {
             head->prev = nullptr;
         }
@@ -73,6 +73,7 @@ public:
             std::cout << temp->data << " ";
             temp = temp->next;
         }
+       
     }
     void sort() {
        
@@ -130,7 +131,7 @@ int main()
     setlocale(0, "rus");
     int proverka;
     do {
-        std::cout << "1 - Добавить элемент в начало.\n2 - Добавить элемент в конец.\n3 - Удалить элемент с начала.\n4 - Удалить элемент с конца.\n5 - Отобразить список.\n6 - Сортировать список\n7 - Удалить дубликаты.\n8 - Выйти.\n";
+        std::cout << "\n1 - Добавить элемент в начало.\n2 - Добавить элемент в конец.\n3 - Удалить элемент с начала.\n4 - Удалить элемент с конца.\n5 - Отобразить список.\n6 - Сортировать список\n7 - Удалить дубликаты.\n8 - Выйти.\n";
         std::cin >> proverka;
 
         switch (proverka)
